@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+
+	<!-- Adding the Database -->
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<!-- Adding Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- CSS Link -->
+	<link rel="stylesheet" href="../Firebase-Train-Scheduler/assets/css/style.css">
+
+	 <!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lemonada|Roboto|Vibur" rel="stylesheet">
+	
+	<!-- Link to moment.js-->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	</head>
+	
+   
+<body>
+
+	<div class="wrapper">
+	
+	    <div class="jumbotron">
+          <h1>The Train Schedule</h1>
+          <h3>All Aboard!!</h3>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">Current Train Schedule</div>
+		  <div class="panel-body">
+			<table class="table table-striped" id="trainScheduleTable">
+				  <thead>
+					<tr>
+					  <th>Train Name</th>
+					  <th>Destination</th>
+					  <th>Frequency (Minutes)</th>
+					  <th>Next Arrival</th>
+					  <th>Minutes Away</th>
+					</tr>
+				  </thead>
+				  <tbody>
+				  </tbody>
+			</table>
+		</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">Add Train</div>
+			<div class="panel-body">
+				<div class="form">
+					<form>
+					  <div class="form-group">
+						<label for="trainNameForm">Train Name</label>
+						<input type="text" class="form-control" id="trainNameForm">
+					  </div>
+					  <div class="form-group">
+						<label for="destinationForm">Destination</label>
+						<input type="text" class="form-control" id="destinationForm">
+					  </div>
+					  <div class="form-group">
+						<label for="firstTrainTimeForm">First Train Time (HH:mm - Military Time)</label>
+						<input type="text" class="form-control" id="trainTimeForm">
+					  </div>
+					  <div class="form-group">
+						<label for="frequency">Frequency (Minutes)</label>
+						<input type="text" class="form-control" id="frequencyForm">
+					  </div>
+					  <button type="submit" class="btn btn-default" id="click-button">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<!-- Connecting my JS file -->
+	<script src="../Firebase-Train-Scheduler/assets/javascritp/app.js"></script>
+</body>
+</html>
